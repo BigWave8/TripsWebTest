@@ -1,0 +1,32 @@
+<div class="trip-table">
+  <kendo-grid
+    kendoGridSelectBy="id"
+    [kendoGridBinding]="trips"
+    [pageSize]="20"
+    [pageable]="{
+      buttonCount: 10,
+      pageSizes: [10, 20, 100]
+    }"
+    [sortable]="{
+      allowUnsort: true,
+      mode: 'multiple'
+    }"
+    [filterable]="true"
+    [groupable]="true"
+    [reorderable]="true"
+    [resizable]="true"
+    [height]="640"
+    [columnMenu]="{ filter: true }"
+  >
+    <kendo-grid-column field="id" title="Id"></kendo-grid-column>
+    <kendo-grid-column field="driverId" title="Driver id"></kendo-grid-column>
+    <kendo-grid-column
+      field="pickupTime"
+      title="Pickup time"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="dropoffTime"
+      title="Dropoff time"
+    ></kendo-grid-column>
+  </kendo-grid>
+</div>

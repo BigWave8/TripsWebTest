@@ -1,0 +1,21 @@
+<div class="driver-table">
+  <kendo-grid
+    kendoGridSelectBy="id"
+    [kendoGridBinding]="drivers"
+    [pageSize]="20"
+    [pageable]="true"
+    [sortable]="true"
+    [filterable]="true"
+    [groupable]="true"
+    [reorderable]="true"
+    [resizable]="true"
+    [height]="640"
+    [columnMenu]="{ filter: true }"
+  >
+    <kendo-grid-column field="id" title="Id"></kendo-grid-column>
+    <kendo-grid-column
+      field="payableTime"
+      title="Payable time (minutes)"
+    ></kendo-grid-column>
+  </kendo-grid>
+</div>
